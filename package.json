@@ -1,0 +1,31 @@
+{
+  "name": "demo-alert",
+  "private": true,
+  "version": "1.0.0",
+  "description": "demo of sound-alert.js",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify index.js -o dist/o.js && cp index.html dist/",
+    "pretest": "npm run build",
+    "test": "http-server -o",
+    "surge": "npm run build && surge dist demo-alert.surge.sh"
+  },
+  "keywords": [],
+  "author": "Beeno Tung",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "sound-alert.js": "^0.0.4"
+  },
+  "devDependencies": {
+    "browserify": "^16.2.2",
+    "http-server": "^0.11.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beenotung/demo-alert.git"
+  },
+  "bugs": {
+    "url": "https://github.com/beenotung/demo-alert/issues"
+  },
+  "homepage": "https://github.com/beenotung/demo-alert#readme"
+}
